@@ -2,6 +2,23 @@
 Grafana Dashboard to monitor a bare-metal and sparse Cardano node.
 
 This Grafana+Prometheus dashboard is designed to remotely monitor the most important metrics for the block producer and all relays of a bare-metal and sparse Cardano stakepool. Thanks to alarm presets, you'll receive real-time notifications via Telegram, minimizing reaction time in case of issues. The dashboard collects and organizes the keys performance indexes and, moreover, important information about P2P connections (the board shows P2P information only for relay #4 to since is our P2P enabled relay). This board is a melting pot of various existing dashboards provided by other SPOs, with added panels, optimizations, and other enhancements to make it compatible with the latest node developments and third-party sites (e.g., cexplorer.org).
+
+### KES, minting and performance section
+![kes](https://github.com/CardenPool/Stake-Pool-Grafana-Dashboard/assets/86101039/25c345c8-96c1-46eb-9f77-5bb4745573fe)
+
+### System load section
+![load](https://github.com/CardenPool/Stake-Pool-Grafana-Dashboard/assets/86101039/e6b7d121-99bd-463a-aeb8-bef0827c7fbe)
+
+### Time synchronization section
+![Time synchronization](https://github.com/CardenPool/Stake-Pool-Grafana-Dashboard/assets/86101039/2462676a-55c8-4665-ac8e-d7df310424f7)
+
+### Temperatures section
+![Temperatures](https://github.com/CardenPool/Stake-Pool-Grafana-Dashboard/assets/86101039/7a65d69a-4d34-4d25-8153-f6a2ee846baf)
+
+### Node and chain state
+![Node and chain](https://github.com/CardenPool/Stake-Pool-Grafana-Dashboard/assets/86101039/57bd1e89-d8d9-475d-ae9d-473201f6a85b)
+
+
 This script is for SPO use only. Further improvements will be shared. Please, consider this work as a work in progress.
 
 ## Installation
