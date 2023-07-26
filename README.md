@@ -2,7 +2,7 @@
 Grafana Dashboard to monitor a bare-metal and sparse Cardano node.
 
 This Grafana+Prometheus dashboard is designed to remotely monitor the most important metrics for the block producer and all relays of a bare-metal and sparse Cardano stakepool. Thanks to alarm presets, you'll receive real-time notifications via Telegram, minimizing reaction time in case of issues. The dashboard collects and organizes the keys performance indexes and, moreover, important information about P2P connections (the board shows P2P information only for relay #4 to since is our P2P enabled relay). This board is a melting pot of various existing dashboards provided by other SPOs, with added panels, optimizations, and other enhancements to make it compatible with the latest node developments and third-party sites (e.g., cexplorer.org).
-Further improvements will be shared. Please, consider this work as a work in progress.
+This script is for SPO use only. Further improvements will be shared. Please, consider this work as a work in progress.
 
 ## Installation
 To make this board fully working, you need to :
@@ -37,24 +37,33 @@ Add this line at the end of the file:
 ```
 Save the file and agree with the cron update request. 
 
-4) Copy and configure the provided script for leader-log scraping
-```console
-wget https://raw.github.com/.....
-chmod +x getstats.sh
-```
-This script is a modified version of the leader-schedule script provided by XXXXXXXX . In addition to the original version, it creates a local JSON files containing the number of elected leader slot for the next epoch. The leader-schedule script must be run at least 1.5 days before the epoch ends. You have to edit your **block-producer's** cron again to automate the process:
-```console
-contab -e
-```
+4) Edit the leader schedule scipt [Guide: Configuring slot leader calculation](https://www.coincashew.com/coins/overview-ada/guide-how-to-build-a-haskell-stakepool-node/part-iii-operation/configuring-slot-leader-calculation). In addition to the original version, it creates a local JSON files containing the number of elected leader slot for the next epoch. At line 119, before the closing }, add the following lines:
+
 
 ```bash
-#Run the leader schedule every day. leaderScheduleCheck.sh check if we're 1.5 days before epoch ends.
-#Epoch in MAINNET starts at 21:45 UTC
-55 23 * * * /home/zion/cardano-my-node/leaderScheduleCheck.sh > /home/zion/cardano-my-node/logs/leaderSchedule_logs.txt 2>&1
+#Count assigned slots
+# Verify input file existence
+if [ -f "$DIRECTORY/logs/leaderSchedule_$next_epoch.txt" ]; then
+    # Count single values within the column "SlotNo" (exluding the first line)
+    count=$(awk 'NR>2 {sum+=1} END {print sum}' "$DIRECTORY/logs/leaderSchedule_$next_epoch.txt")
+if [ $count ]; then
+    # Save the result within the output file
+    echo "leaderScript_AssignedSlots $count" > "$DIRECTORY/logs/prometheus/leaderSchedule.prom"
+else
+#Save "leaderScript_AssignedSlots 0" within output file
+    echo "leaderScript_AssignedSlots 0" > "$DIRECTORY/logs/prometheus/leaderSchedule.prom"
+fi
+else
+    # If input file doesn't exists, save "leaderScript_AssignedSlots 0" within the output file
+    echo "leaderScript_AssignedSlots -9999" > "$DIRECTORY/logs/prometheus/leaderSchedule.prom"
+fi
+
 ```
-Save the file and agree with the cron update request. 
+
+Since the installation of the leader log script requires adding a cron task for its execution, the JSON file will be created with each run.
 
 5) Install the board using your grafana front-end
+Visit your grafana page with your browser and auteticate. ........
 
 You're done!
 
