@@ -6,6 +6,9 @@ This Grafana+Prometheus dashboard is designed to remotely monitor the most impor
 ### KES, minting and performance section
 ![kes e minting](https://github.com/CardenPool/Stake-Pool-Grafana-Dashboard/assets/86101039/3d8bef42-a150-484c-b06f-8471f2167a51)
 
+### Flood monitoring
+![Flood](https://github.com/CardenPool/Stake-Pool-Grafana-Dashboard/assets/86101039/a879aaf7-bed2-4fbb-a81e-36e76b2b9c60)
+
 ### System load section
 ![load](https://github.com/CardenPool/Stake-Pool-Grafana-Dashboard/assets/86101039/e6b7d121-99bd-463a-aeb8-bef0827c7fbe)
 
