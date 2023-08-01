@@ -7,6 +7,7 @@ This Grafana+Prometheus dashboard is designed to remotely monitor the most impor
 ![kes e minting](https://github.com/CardenPool/Stake-Pool-Grafana-Dashboard/assets/86101039/3d8bef42-a150-484c-b06f-8471f2167a51)
 
 ### Flood monitoring
+*Yep...screenshot took at the end of and DDoS attack...*
 ![Flood](https://github.com/CardenPool/Stake-Pool-Grafana-Dashboard/assets/86101039/a879aaf7-bed2-4fbb-a81e-36e76b2b9c60)
 
 ### System load section
