@@ -39,7 +39,7 @@ grafana-cli plugins install simpod-json-datasource
 ```console
 mkdir grafana-scripts
 cd grafana-scripts
-wget https://raw.github.com/.....
+wget https://raw.githubusercontent.com/CardenPool/Cardano-Stake-Pool-Grafana-Dashboard/main/getstats.sh
 chmod +x getstats.sh
 ```
 You have to edit this script adding your pool ID (BECH 32 format). To edit the file, you can use nano:
@@ -50,10 +50,10 @@ This script downloads the most updated information about your stake pool from ce
 ```console
 contab -e
 ```
-Add this line at the end of the file:
+Add this line at the end of the file. This retrieve latest information every two hours:
 ```bash
 #Get data from Cexplorer every day at 06:00
-0 */3 * * * /home/your-user-name/grafana-scripts/getstats.sh
+0 */2 * * * /home/dozer/cardano-my-node/poolStat/getstats.sh
 ```
 Save the file and agree with the cron update request. 
 
