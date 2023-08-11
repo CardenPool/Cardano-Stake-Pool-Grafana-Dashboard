@@ -4,11 +4,10 @@ Grafana Dashboard to monitor a bare-metal and sparse Cardano node.
 This Grafana+Prometheus dashboard is designed to remotely monitor the most important metrics for the block producer and all relays of a bare-metal and sparse Cardano stakepool. Thanks to alarm presets, you'll receive real-time notifications via Telegram, minimizing reaction time in case of issues. The dashboard collects and organizes the keys performance indexes and, moreover, important information about P2P connections (the board shows P2P information only for relay #4 to since is our P2P enabled relay). This board is a melting pot of various existing dashboards provided by other SPOs ([like this](https://forum.cardano.org/t/setting-up-a-grafana-dashboard-for-cardano-pool/66062) from [SNSKY]), with added panels, optimizations, and other enhancements to make it compatible with the latest node developments and third-party sites (e.g., cexplorer.org).
 
 ### KES, minting and performance section
-![kes e minting](https://github.com/CardenPool/Stake-Pool-Grafana-Dashboard/assets/86101039/3d8bef42-a150-484c-b06f-8471f2167a51)
+![KES and Minting](https://github.com/CardenPool/Stake-Pool-Grafana-Dashboard/assets/86101039/5dcf967b-6832-497f-876a-d8196a72ede7)
 
 ### DDoS / Flood monitoring
-![Flood](https://github.com/CardenPool/Stake-Pool-Grafana-Dashboard/assets/86101039/a879aaf7-bed2-4fbb-a81e-36e76b2b9c60)
-<sub>(Yep, screenshot taken at the end of and DDoS attack...)<sub>
+![DDoS](https://github.com/CardenPool/Stake-Pool-Grafana-Dashboard/assets/86101039/f26db8d3-8ec5-44cc-90fa-def553064279)
 
 ### System load section
 ![load](https://github.com/CardenPool/Stake-Pool-Grafana-Dashboard/assets/86101039/e6b7d121-99bd-463a-aeb8-bef0827c7fbe)
