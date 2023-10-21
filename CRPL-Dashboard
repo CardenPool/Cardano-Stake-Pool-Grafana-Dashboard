@@ -1774,7 +1774,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "100 - (avg by(alias) (irate(node_cpu_seconds_total{mode=\"idle\",instance=\"192.168.2.110:9100\"}[1m])) * 100)",
+          "expr": "100 - (avg by(alias) (irate(node_cpu_seconds_total{mode=\"idle\",instance=\"xxx.xxx.xxx.xxx:9100\"}[1m])) * 100)",
           "instant": true,
           "interval": "",
           "legendFormat": "CPU",
@@ -1788,7 +1788,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "100 - ((node_filesystem_avail_bytes{mountpoint=\"/\",fstype!=\"rootfs\",instance=\"192.168.2.110:9100\"} * 100) / node_filesystem_size_bytes{mountpoint=\"/\",fstype!=\"rootfs\",instance=\"192.168.2.110:9100\"})",
+          "expr": "100 - ((node_filesystem_avail_bytes{mountpoint=\"/\",fstype!=\"rootfs\",instance=\"xxx.xxx.xxx.xxx:9100\"} * 100) / node_filesystem_size_bytes{mountpoint=\"/\",fstype!=\"rootfs\",instance=\"xxx.xxx.xxx.xxx:9100\"})",
           "instant": true,
           "interval": "",
           "legendFormat": "Disk",
@@ -1802,7 +1802,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "(1 - (node_memory_MemAvailable_bytes{instance=\"192.168.2.110:9100\"} / (node_memory_MemTotal_bytes{instance=\"192.168.2.110:9100\"})))* 100",
+          "expr": "(1 - (node_memory_MemAvailable_bytes{instance=\"xxx.xxx.xxx.xxx:9100\"} / (node_memory_MemTotal_bytes{instance=\"xxx.xxx.xxx.xxx:9100\"})))* 100",
           "hide": false,
           "instant": true,
           "interval": "",
@@ -1817,7 +1817,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "(1- (node_memory_SwapFree_bytes{instance=\"192.168.2.110:9100\"} / node_memory_SwapTotal_bytes{instance=\"192.168.2.110:9100\"})) * 100",
+          "expr": "(1- (node_memory_SwapFree_bytes{instance=\"xxx.xxx.xxx.xxx:9100\"} / node_memory_SwapTotal_bytes{instance=\"xxx.xxx.xxx.xxx:9100\"})) * 100",
           "hide": false,
           "instant": true,
           "interval": "",
@@ -2143,7 +2143,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "node_boot_time_seconds{instance=\"192.168.2.110:9100\"}/60/60",
+          "expr": "node_boot_time_seconds{instance=\"xxx.xxx.xxx.xxx:9100\"}/60/60",
           "hide": false,
           "interval": "",
           "legendFormat": "Validator node",
@@ -2777,7 +2777,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "100 - (avg by(alias) (irate(node_cpu_seconds_total{mode=\"idle\",instance=\"192.168.2.112:9100\"}[1m])) * 100)",
+          "expr": "100 - (avg by(alias) (irate(node_cpu_seconds_total{mode=\"idle\",instance=\"xxx.xxx.xxx.xxx:9100\"}[1m])) * 100)",
           "hide": false,
           "instant": true,
           "interval": "",
@@ -2792,7 +2792,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "100 - ((node_filesystem_avail_bytes{mountpoint=\"/\",fstype!=\"rootfs\",instance=\"192.168.2.112:9100\"} * 100) / node_filesystem_size_bytes{mountpoint=\"/\",fstype!=\"rootfs\",instance=\"192.168.2.112:9100\"})",
+          "expr": "100 - ((node_filesystem_avail_bytes{mountpoint=\"/\",fstype!=\"rootfs\",instance=\"xxx.xxx.xxx.xxx:9100\"} * 100) / node_filesystem_size_bytes{mountpoint=\"/\",fstype!=\"rootfs\",instance=\"xxx.xxx.xxx.xxx:9100\"})",
           "hide": false,
           "instant": true,
           "interval": "",
@@ -2807,7 +2807,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "(1 - (node_memory_MemAvailable_bytes{instance=\"192.168.2.112:9100\"} / (node_memory_MemTotal_bytes{instance=\"192.168.2.112:9100\"})))* 100",
+          "expr": "(1 - (node_memory_MemAvailable_bytes{instance=\"xxx.xxx.xxx.xxx:9100\"} / (node_memory_MemTotal_bytes{instance=\"xxx.xxx.xxx.xxx:9100\"})))* 100",
           "hide": false,
           "instant": true,
           "interval": "",
@@ -2822,7 +2822,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "(1- (node_memory_SwapFree_bytes{instance=\"192.168.2.112:9100\"} / node_memory_SwapTotal_bytes{instance=\"192.168.2.112:9100\"})) * 100",
+          "expr": "(1- (node_memory_SwapFree_bytes{instance=\"xxx.xxx.xxx.xxx:9100\"} / node_memory_SwapTotal_bytes{instance=\"xxx.xxx.xxx.xxx:9100\"})) * 100",
           "hide": false,
           "instant": true,
           "interval": "",
@@ -3594,7 +3594,7 @@
             "uid": "-hivTiZnz"
           },
           "editorMode": "builder",
-          "expr": "node_netstat_Icmp_InMsgs{instance=\"192.168.2.112:9100\"}",
+          "expr": "node_netstat_Icmp_InMsgs{instance=\"xxx.xxx.xxx.xxx:9100\"}",
           "hide": false,
           "instant": false,
           "legendFormat": "Relay 2",
@@ -3633,7 +3633,7 @@
             "uid": "-hivTiZnz"
           },
           "editorMode": "builder",
-          "expr": "node_netstat_Icmp_InMsgs{instance=\"192.168.2.110:9100\"}",
+          "expr": "node_netstat_Icmp_InMsgs{instance=\"xxx.xxx.xxx.xxx:9100\"}",
           "hide": false,
           "instant": false,
           "legendFormat": "Block producer",
@@ -3742,7 +3742,7 @@
             "uid": "-hivTiZnz"
           },
           "editorMode": "builder",
-          "expr": "node_netstat_Udp_NoPorts{instance=\"192.168.2.112:9100\"}",
+          "expr": "node_netstat_Udp_NoPorts{instance=\"xxx.xxx.xxx.xxx:9100\"}",
           "hide": false,
           "instant": false,
           "legendFormat": "Relay 2",
@@ -3781,7 +3781,7 @@
             "uid": "-hivTiZnz"
           },
           "editorMode": "builder",
-          "expr": "node_netstat_Udp_NoPorts{instance=\"192.168.2.110:9100\"}",
+          "expr": "node_netstat_Udp_NoPorts{instance=\"xxx.xxx.xxx.xxx:9100\"}",
           "hide": false,
           "instant": false,
           "legendFormat": "Block producer",
@@ -4221,7 +4221,7 @@
             "uid": "-hivTiZnz"
           },
           "exemplar": true,
-          "expr": "(1 - (node_memory_MemAvailable_bytes{instance=\"192.168.2.110:9100\"} / (node_memory_MemTotal_bytes{instance=\"192.168.2.110:9100\"})))* 100",
+          "expr": "(1 - (node_memory_MemAvailable_bytes{instance=\"xxx.xxx.xxx.xxx:9100\"} / (node_memory_MemTotal_bytes{instance=\"xxx.xxx.xxx.xxx:9100\"})))* 100",
           "hide": false,
           "interval": "",
           "legendFormat": "Core",
@@ -4245,7 +4245,7 @@
             "uid": "-hivTiZnz"
           },
           "exemplar": true,
-          "expr": "(1 - (node_memory_MemAvailable_bytes{instance=\"192.168.2.112:9100\"} / (node_memory_MemTotal_bytes{instance=\"192.168.2.112:9100\"})))* 100",
+          "expr": "(1 - (node_memory_MemAvailable_bytes{instance=\"xxx.xxx.xxx.xxx:9100\"} / (node_memory_MemTotal_bytes{instance=\"xxx.xxx.xxx.xxx:9100\"})))* 100",
           "hide": false,
           "interval": "",
           "legendFormat": "Relay2",
@@ -4471,7 +4471,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "node_load5{instance=\"192.168.2.110:9100\"}",
+          "expr": "node_load5{instance=\"xxx.xxx.xxx.xxx:9100\"}",
           "format": "time_series",
           "instant": false,
           "interval": "",
@@ -4482,7 +4482,7 @@
         },
         {
           "exemplar": true,
-          "expr": "node_load5{instance=\"192.168.2.110:9100\"}*100",
+          "expr": "node_load5{instance=\"xxx.xxx.xxx.xxx:9100\"}*100",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 3,
@@ -4492,7 +4492,7 @@
         },
         {
           "exemplar": true,
-          "expr": "node_load15{instance=\"192.168.2.110:9100\"}*100",
+          "expr": "node_load15{instance=\"xxx.xxx.xxx.xxx:9100\"}*100",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 3,
@@ -4736,7 +4736,7 @@
             "uid": "-hivTiZnz"
           },
           "exemplar": true,
-          "expr": "node_load1{instance=\"192.168.2.112:9100\"}*100",
+          "expr": "node_load1{instance=\"xxx.xxx.xxx.xxx:9100\"}*100",
           "hide": false,
           "interval": "",
           "legendFormat": "R2 Load 1m",
@@ -4748,7 +4748,7 @@
             "uid": "-hivTiZnz"
           },
           "exemplar": true,
-          "expr": "node_load5{instance=\"192.168.2.112:9100\"}*100",
+          "expr": "node_load5{instance=\"xxx.xxx.xxx.xxx:9100\"}*100",
           "hide": false,
           "interval": "",
           "legendFormat": "R2 Load 5m",
@@ -4760,7 +4760,7 @@
             "uid": "-hivTiZnz"
           },
           "exemplar": true,
-          "expr": "node_load15{instance=\"192.168.2.112:9100\"}*100",
+          "expr": "node_load15{instance=\"xxx.xxx.xxx.xxx:9100\"}*100",
           "hide": false,
           "interval": "",
           "legendFormat": "R2 Load 15m",
@@ -4945,7 +4945,7 @@
             "uid": "-hivTiZnz"
           },
           "exemplar": true,
-          "expr": "sum(rate(node_network_receive_bytes_total{instance=\"192.168.2.110:9100\"}[1h])) * 3600",
+          "expr": "sum(rate(node_network_receive_bytes_total{instance=\"xxx.xxx.xxx.xxx:9100\"}[1h])) * 3600",
           "interval": "",
           "legendFormat": "Core",
           "refId": "A"
@@ -4969,7 +4969,7 @@
           },
           "editorMode": "code",
           "exemplar": true,
-          "expr": "sum(rate(node_network_receive_bytes_total{instance=\"192.168.2.112:9100\"}[1h])) * 3600",
+          "expr": "sum(rate(node_network_receive_bytes_total{instance=\"xxx.xxx.xxx.xxx:9100\"}[1h])) * 3600",
           "hide": false,
           "interval": "",
           "legendFormat": "Relay2",
@@ -5632,7 +5632,7 @@
             "uid": "-hivTiZnz"
           },
           "exemplar": true,
-          "expr": "node_filefd_allocated{instance=\"192.168.2.110:9100\"}",
+          "expr": "node_filefd_allocated{instance=\"xxx.xxx.xxx.xxx:9100\"}",
           "interval": "",
           "legendFormat": "Core",
           "refId": "A"
@@ -5655,7 +5655,7 @@
             "uid": "-hivTiZnz"
           },
           "exemplar": true,
-          "expr": "node_filefd_allocated{instance=\"192.168.2.112:9100\"}",
+          "expr": "node_filefd_allocated{instance=\"xxx.xxx.xxx.xxx:9100\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "Relay2",
@@ -5909,7 +5909,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "node_timex_estimated_error_seconds{instance=\"192.168.2.110:9100\"}",
+          "expr": "node_timex_estimated_error_seconds{instance=\"xxx.xxx.xxx.xxx:9100\"}",
           "format": "time_series",
           "hide": false,
           "interval": "",
@@ -5920,7 +5920,7 @@
         },
         {
           "exemplar": true,
-          "expr": "node_timex_offset_seconds{instance=\"192.168.2.110:9100\"}",
+          "expr": "node_timex_offset_seconds{instance=\"xxx.xxx.xxx.xxx:9100\"}",
           "format": "time_series",
           "hide": false,
           "interval": "",
@@ -5931,7 +5931,7 @@
         },
         {
           "exemplar": true,
-          "expr": "node_timex_maxerror_seconds{instance=\"192.168.2.110:9100\"}",
+          "expr": "node_timex_maxerror_seconds{instance=\"xxx.xxx.xxx.xxx:9100\"}",
           "format": "time_series",
           "hide": false,
           "interval": "",
@@ -6385,7 +6385,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "node_timex_estimated_error_seconds{instance=\"192.168.2.112:9100\"}",
+          "expr": "node_timex_estimated_error_seconds{instance=\"xxx.xxx.xxx.xxx:9100\"}",
           "format": "time_series",
           "hide": false,
           "interval": "",
@@ -6396,7 +6396,7 @@
         },
         {
           "exemplar": true,
-          "expr": "node_timex_offset_seconds{instance=\"192.168.2.112:9100\"}",
+          "expr": "node_timex_offset_seconds{instance=\"xxx.xxx.xxx.xxx:9100\"}",
           "format": "time_series",
           "hide": false,
           "interval": "",
@@ -6407,7 +6407,7 @@
         },
         {
           "exemplar": true,
-          "expr": "node_timex_maxerror_seconds{instance=\"192.168.2.112:9100\"}",
+          "expr": "node_timex_maxerror_seconds{instance=\"xxx.xxx.xxx.xxx:9100\"}",
           "format": "time_series",
           "hide": false,
           "interval": "",
@@ -7065,7 +7065,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "node_hwmon_temp_celsius{instance=\"192.168.2.110:9100\"}",
+          "expr": "node_hwmon_temp_celsius{instance=\"xxx.xxx.xxx.xxx:9100\"}",
           "format": "time_series",
           "instant": false,
           "interval": "",
@@ -7339,7 +7339,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "node_hwmon_temp_celsius{instance=\"192.168.2.112:9100\"}",
+          "expr": "node_hwmon_temp_celsius{instance=\"xxx.xxx.xxx.xxx:9100\"}",
           "format": "time_series",
           "instant": false,
           "interval": "",
@@ -8398,7 +8398,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "node_memory_MemTotal_bytes{instance=\"192.168.2.110:9100\"}",
+          "expr": "node_memory_MemTotal_bytes{instance=\"xxx.xxx.xxx.xxx:9100\"}",
           "instant": true,
           "intervalFactor": 1,
           "legendFormat": "Core",
@@ -8429,7 +8429,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "node_memory_MemTotal_bytes{instance=\"192.168.2.112:9100\"}",
+          "expr": "node_memory_MemTotal_bytes{instance=\"xxx.xxx.xxx.xxx:9100\"}",
           "hide": false,
           "instant": true,
           "intervalFactor": 1,
@@ -8541,7 +8541,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "node_filesystem_size_bytes{instance=\"192.168.2.110:9100\",mountpoint=\"/\",fstype!=\"rootfs\"}",
+          "expr": "node_filesystem_size_bytes{instance=\"xxx.xxx.xxx.xxx:9100\",mountpoint=\"/\",fstype!=\"rootfs\"}",
           "format": "time_series",
           "hide": false,
           "instant": true,
@@ -8575,7 +8575,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "node_filesystem_size_bytes{instance=\"192.168.2.112:9100\",mountpoint=\"/\",fstype!=\"rootfs\"}",
+          "expr": "node_filesystem_size_bytes{instance=\"xxx.xxx.xxx.xxx:9100\",mountpoint=\"/\",fstype!=\"rootfs\"}",
           "format": "time_series",
           "hide": false,
           "instant": true,
